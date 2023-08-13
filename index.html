@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Website With Tailwind CSS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="tracking-wider">
+
+    <header>
+        <nav class="container py-5 flex justify-between items-center">
+            <div>
+                <a href="#home">
+                    <img src="images/Frame 12.png" alt="">
+                </a>
+            </div>
+            <div>
+                <ul class="hidden lg:flex items-center space-x-6">
+                    <li><a href="#home" class="hover:text-lime-700 ease-in duration-200 hover:border-b-[3px] ">Home</a></li>
+                    <li><a href="#Services" class="hover:text-lime-600 ease-in duration-200 hover:border-b-[3px] ">Services</a></li>
+                    <li><a href="#Simulator" class="hover:text-lime-600 ease-in duration-200 hover:border-b-[3px] ">Simulator</a></li>
+                    <li><a href="#Educations" class="hover:text-lime-600 ease-in duration-200 hover:border-b-[3px] ">Educations</a></li>
+                    <li><a href="#About" class="hover:text-lime-600 ease-in duration-200 hover:border-b-[3px] ">About</a></li>
+                </ul>
+            </div>
+            <div>
+                <button class="hidden lg:block bg-color-green px-8 py-3 text-white rounded-full capitalize font-bold hover:opacity-80 ease-in duration-200">Download</button>
+            </div>
+            <div id="hamburger" class="lg:hidden cursor-pointer z-50">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div id="menu" class="hidden bg-color-green h-[100vh] absolute inset-0">
+                <ul class="h-full grid place-items-center py-20 text-white">
+                    <li><a id="hLink" href="#home" class="hover:text-lime-700 ease-in duration-200 hover:border-b-[3px] ">Home</a></li>
+                    <li><a id="hLink" href="#Services" class="hover:text-lime-600 ease-in duration-200 hover:border-b-[3px] ">Services</a></li>
+                    <li><a id="hLink" href="#Simulator" class="hover:text-lime-600 ease-in duration-200 hover:border-b-[3px] ">Simulator</a></li>
+                    <li><a id="hLink" href="#Educations" class="hover:text-lime-600 ease-in duration-200 hover:border-b-[3px] ">Educations</a></li>
+                    <li><a id="hLink" href="#About" class="hover:text-lime-600 ease-in duration-200 hover:border-b-[3px] ">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home" class="px-11">
+            <div class="container py-20 bg-color-another-green rounded flex justify-center items-center">
+                <div>
+                    <img src="images/7309683 1.png" alt="">
+                </div>
+                <div>
+                    <h1 class="lg:text-7xl font-bold text-center">Faster payments <br> with powerfull <br> technology</h1>
+                </div>
+                <div>
+                    <img src="images/7309700 1.png" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        const hamburger = document.querySelector('#hamburger');
+        const menu = document.querySelector('#menu');
+        const hLink = document .querySelector('#hLink');
+        const faSolid = document.querySelector('.fa-solid')
+
+        hamburger.addEventListener('click', () =>{
+            menu.classList.toggle('hidden');
+            faSolid.classList.toggle('fa-xmark')
+        })
+
+        hLink.forEach(Link => {
+            Link.addEventListener('click',() => {
+                menu.classList.toggle('hidden');
+                faSolid.classList.toggle('fa-xmark')
+            })
+        });
+
+    </script>
+</body>
+</html>
